@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+:root {
+  /* Premium Light Theme - Maximum readability */
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+  --primary: #4f46e5;
+  --primary-foreground: #ffffff;
+  --secondary: #f9fafb;
+  --secondary-foreground: #000000;
+  --muted: #f9fafb;
+  --muted-foreground: #374151;
+  --accent: #f9fafb;
+  --accent-foreground: #000000;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #4f46e5;
+
+  /* Mesh Gradient Colors - Subtle but visible */
+  --mesh-color-1: rgba(99, 102, 241, 0.12);
+  --mesh-color-2: rgba(168, 85, 247, 0.12);
+  --mesh-color-3: rgba(236, 72, 153, 0.12);
+}
+
+.dark {
+  /* Premium Dark Theme - Deep Slate/Zinc with glowing accents */
+  --background: #020617;
+  /* Slate-950 */
+  --foreground: #f8fafc;
+  /* Slate-50 */
+  --card: #0f172a;
+  /* Slate-900 */
+  --card-foreground: #f8fafc;
+  --popover: #0f172a;
+  --popover-foreground: #f8fafc;
+  --primary: #818cf8;
+  /* Indigo-400 */
+  --primary-foreground: #ffffff;
+  --secondary: #1e293b;
+  /* Slate-800 */
+  --secondary-foreground: #f8fafc;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
+  /* Slate-400 */
+  --accent: #1e293b;
+  --accent-foreground: #f8fafc;
+  --destructive: #7f1d1d;
+  --destructive-foreground: #fef2f2;
+  --border: #1e293b;
+  --input: #1e293b;
+  --ring: #818cf8;
+
+  /* Mesh Gradient Colors - Dark Mode */
+  --mesh-color-1: rgba(99, 102, 241, 0.15);
+  --mesh-color-2: rgba(168, 85, 247, 0.15);
+  --mesh-color-3: rgba(236, 72, 153, 0.15);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  background-image:
+    radial-gradient(at 0% 0%, var(--mesh-color-1) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, var(--mesh-color-2) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, var(--mesh-color-3) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+/* Theme-aware utility classes */
+.text-theme-fg {
+  color: var(--foreground);
+}
+
+.text-theme-muted {
+  color: var(--muted-foreground);
+}
+
+.bg-theme {
+  background-color: var(--background);
+}
+
+.bg-theme-card {
+  background-color: var(--card);
+}
+
+.bg-theme-input {
+  background-color: var(--card);
+}
+
+.bg-theme-secondary {
+  background-color: var(--secondary);
+}
+
+.border-theme {
+  border-color: var(--border);
+}
+
+.ring-theme {
+  --tw-ring-color: var(--border);
+}
+
+.hover-bg-theme-secondary:hover {
+  background-color: var(--secondary);
+}
+
+.focus-ring-primary:focus {
+  --tw-ring-color: var(--primary);
+}
+
+/* Glassmorphism Utilities */
+.glass {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.dark .glass {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: none;
+}
+
+/* Premium Card Hover Effect */
+.premium-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.premium-card:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.8);
+  /* Lighter on hover */
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+  border-color: rgba(99, 102, 241, 0.2);
+  /* Subtle indigo border on hover */
+}
+
+.dark .premium-card:hover {
+  background: rgba(30, 41, 59, 0.5);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+  border-color: rgba(129, 140, 248, 0.3);
+  /* Indigo glow */
+}
