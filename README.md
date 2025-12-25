@@ -1,67 +1,49 @@
-# Activity Tracker Application
+# 📊 Activity Tracker
 
-A full-stack application to record and retrieve user activities.
+A full-stack activity tracking application built with **Java Spring Boot** (backend) and **Next.js** (frontend).
 
-## Tech Stack
+## 📁 Project Structure
 
-- **Backend**: Java Spring Boot 3.4.1, H2 Database
-- **Frontend**: Next.js 15, React 18, TypeScript, Tailwind CSS
+```
+Activity-Tracker-Task/
+├── backend/                            # Java Spring Boot Application
+├── frontend/                           # Next.js React Application
+├── demo/                               # Screenshots and demos
+├── requirements.txt                    # System requirements
+├── SETUP_MAC.md                        # macOS Setup Guide
+├── SETUP_WINDOWS.md                    # Windows Setup Guide
+├── RUNNING.md                          # Detailed Running Guide
+└── README.md                           # This file
+```
 
-## Prerequisites
+## 🚀 Getting Started
 
-- Java 17 or higher
-- Node.js 18 or higher
-- Maven 3.6+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/sak07/Activity-Tracker.git
+cd Activity-Tracker
+```
 
-## Getting Started
+### 2. Prerequisites
+Ensure you have **Java 21** and **Node.js 18+** installed. Check [requirements.txt](requirements.txt) for details.
 
-### Backend
+### 3. Setup
+Follow the guide for your OS:
+- [macOS Setup Guide](SETUP_MAC.md)
+- [Windows Setup Guide](SETUP_WINDOWS.md)
 
-1. Navigate to the backend directory:
-   ```bash
-   cd backend
-   ```
+### 4. Run the Application
+For a quick start, follow the instructions in [RUNNING.md](RUNNING.md) or use the scripts:
+- **macOS/Linux**: `./run_backend.sh`
+- **Windows**: `run_backend.bat`
 
-2. Run the application:
-   ```bash
-   mvn spring-boot:run
-   ```
+## 🌟 Features
+- Record user activities
+- View activity logs with pagination
+- User management
+- Premium UI design
+- Dark/Light Mode Support (Theme-aware CSS)
+- Responsive layout
 
-   The backend will start on `http://localhost:8080`.
-   H2 Console is available at `http://localhost:8080/h2-console` (JDBC URL: `jdbc:h2:file:./data/activitytracker`, User: `sa`, Password: empty).
-
-### Frontend
-
-1. Navigate to the frontend directory:
-   ```bash
-   cd frontend
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
-
-   The frontend will start on `http://localhost:3000`.
-
-## Features
-
-- **User Management**: Create and view users.
-- **Activity Tracking**: Record activities with types, descriptions, and metadata.
-- **Dashboard**: View recent activities and record new ones.
-- **Filtering**: Filter activities by type.
-- **Pagination**: Browse through large sets of activities.
-
-## API Endpoints
-
-- `GET /api/users` - List all users
-- `POST /api/users` - Create a user
-- `GET /api/activities` - List activities (paginated)
-- `POST /api/activities` - Record an activity
-- `GET /api/activities/type/{type}` - Filter by activity type
-- `GET /api/activities/user/{userId}` - Filter by user
+## 🔧 Troubleshooting
+If you encounter issues, refer to the troubleshooting sections in the setup guides.

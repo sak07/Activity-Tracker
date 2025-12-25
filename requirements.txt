@@ -1,0 +1,18 @@
+# Project Requirements
+
+## Backend
+- Java 17 or higher (JDK 21 recommended)
+- Maven 3.6+ (or Maven Daemon)
+- Spring Boot 3.2.0
+
+## Frontend
+- Node.js 18.17+ 
+- npm 9+
+
+## Database
+- H2 (In-memory, included)
+- Optional: PostgreSQL or MySQL for production
+
+## IDE (Recommended)
+- VS Code
+- IntelliJ IDEA
