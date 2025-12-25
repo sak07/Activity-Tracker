@@ -1,0 +1,34 @@
+A small team wants an activity tracker to better understand how users interact with their platform. They want “something simple” that can be extended later. There is no existing system yet.
+They’ve asked you to build a basic version and make reasonable assumptions where details are missing.
+
+High-Level Goal
+Create a backend service that records and retrieves user activities.
+
+What is an “activity”?
+
+That’s up to you to define, but it should at least:
+- Belong to a user
+- Represent something the user did
+- Have some notion of time
+Anything beyond that is your decision.
+
+Your service should:
+- Accept activity data
+    - How activities are sent is up to you (API, file input, etc.)
+    - Validation rules are not fully specified
+- Store activities
+    - Storage method is your choice (in-memory, file, database, etc.)
+- Allow retrieval of activities
+    - Activities should be retrievable “in a useful way”
+    - Filtering and sorting are optional but encouraged
+    - Be reasonably structured
+    - Code should be readable and organised
+    - Someone else should be able to extend it later
+
+Requirements:
+	•	Code should be clean, organised, and well-documented.
+	•	Include instructions on how to run the project.
+	•	Focus on functionality, usability, and clarity.
+	•	Create a short video explaining the flow of the task completed.
+	•	Git Hub Repo
+Time Limit: 24 hours
